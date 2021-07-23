@@ -1,0 +1,31 @@
+.search-bar {
+  margin-top: 35px;
+
+  form {
+    border: 1px solid white;
+    border-radius: 5px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    input {
+      flex: 1;
+      height: 40px;
+      border: none;
+      background: transparent;
+      padding: 8px;
+      color: #fff;
+      font-family: $font-main;
+      font-size: 17px;
+      font-weight: 500;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    button {
+      margin-right: 8px;
+    }
+  }
+}
