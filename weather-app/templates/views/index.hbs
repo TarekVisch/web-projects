@@ -12,28 +12,73 @@
   </head>
   <body>
     <div class='page'>
-      <div class='container'>
-        <div class='search-bar'>
-          <form>
-            <input type='text' id='search-input' placeholder='Location' />
-            <button type='submit' class='btn-icon'>
+      <div class='sidebar'>
+
+      </div>
+      <div class='weather'>
+        <div class='weather__header'>
+          <div class='weather__header__location'>
+            <div class='weather__header__location--svg'>
               <svg
-                width='24'
-                height='24'
-                viewBox='0 0 24 24'
+                width='20'
+                height='22'
+                fill='none'
+                viewBox='0 0 20 22'
                 xmlns='http://www.w3.org/2000/svg'
               >
                 <path
                   fill-rule='evenodd'
                   clip-rule='evenodd'
-                  d='M10.5 18C14.6421 18 18 14.6421 18 10.5C18 6.35786 14.6421 3 10.5 3C6.35786 3 3 6.35786 3 10.5C3 14.6421 6.35786 18 10.5 18Z'
+                  d='M17.5 9.33331C17.5 15.1666 10 20.1666 10 20.1666C10 20.1666 2.5 15.1666 2.5 9.33331C2.5 5.19118 5.85786 1.83331 10 1.83331C14.1421 1.83331 17.5 5.19118 17.5 9.33331V9.33331Z'
                   stroke='white'
                   stroke-width='2'
                   stroke-linecap='round'
                   stroke-linejoin='round'
                 ></path>
                 <path
-                  d='M21 21L15.8 15.8'
+                  fill-rule='evenodd'
+                  clip-rule='evenodd'
+                  d='M10 11.8333C11.3807 11.8333 12.5 10.714 12.5 9.33331C12.5 7.9526 11.3807 6.83331 10 6.83331C8.61929 6.83331 7.5 7.9526 7.5 9.33331C7.5 10.714 8.61929 11.8333 10 11.8333Z'
+                  stroke='white'
+                  stroke-width='2'
+                  stroke-linecap='round'
+                  stroke-linejoin='round'
+                ></path>
+              </svg>
+            </div>
+            <p id='location'>London</p>
+          </div>
+          <div class='weather__header__expand'>
+            <button id='expand-btn'>
+              <svg
+                width='24'
+                height='24'
+                viewBox='0 0 24 24'
+                fill='none'
+                xmlns='http://www.w3.org/2000/svg'
+              >
+                <path
+                  fill-rule='evenodd'
+                  clip-rule='evenodd'
+                  d='M12 14C13.1046 14 14 13.1046 14 12C14 10.8954 13.1046 10 12 10C10.8954 10 10 10.8954 10 12C10 13.1046 10.8954 14 12 14Z'
+                  stroke='white'
+                  stroke-width='2'
+                  stroke-linecap='round'
+                  stroke-linejoin='round'
+                ></path>
+                <path
+                  fill-rule='evenodd'
+                  clip-rule='evenodd'
+                  d='M20 14C21.1046 14 22 13.1046 22 12C22 10.8954 21.1046 10 20 10C18.8954 10 18 10.8954 18 12C18 13.1046 18.8954 14 20 14Z'
+                  stroke='white'
+                  stroke-width='2'
+                  stroke-linecap='round'
+                  stroke-linejoin='round'
+                ></path>
+                <path
+                  fill-rule='evenodd'
+                  clip-rule='evenodd'
+                  d='M4 14C5.10457 14 6 13.1046 6 12C6 10.8954 5.10457 10 4 10C2.89543 10 2 10.8954 2 12C2 13.1046 2.89543 14 4 14Z'
                   stroke='white'
                   stroke-width='2'
                   stroke-linecap='round'
@@ -41,7 +86,77 @@
                 ></path>
               </svg>
             </button>
-          </form>
+          </div>
+        </div>
+        <div class='weather__body'>
+          <div class='weather__body__image'>
+            <img src='/images/night/clear-sky.png' alt='Few clouds' />
+          </div>
+          <div class='weather__body__temp'>
+            <p id='temperature'>21</p>
+            <p>&deg; <span id='degree'>C</span></p>
+          </div>
+          <div class='weather__body__description'>
+            <p>Clear sky</p>
+          </div>
+          <div class='weather__body__date'>
+            <p>Frid, 23 July</p>
+          </div>
+        </div>
+        <div class='weather__footer'>
+          <!-- Wind  -->
+          <div class='weather__footer__element'>
+            <div class='weather__footer__element--svg'>
+              <svg
+                width='25'
+                height='24'
+                viewBox='0 0 25 24'
+                fill='none'
+                xmlns='http://www.w3.org/2000/svg'
+              >
+                <path
+                  d='M15 17C15 18.65 13.65 20 12 20C10.35 20 9 18.65 9 17H11C11 17.55 11.45 18 12 18C12.55 18 13 17.55 13 17C13 16.45 12.55 16 12 16H2.5V14H12C13.65 14 15 15.35 15 17ZM19.5 6.5C19.5 4.57 17.93 3 16 3C14.07 3 12.5 4.57 12.5 6.5H14.5C14.5 5.67 15.17 5 16 5C16.83 5 17.5 5.67 17.5 6.5C17.5 7.33 16.83 8 16 8H2.5V10H16C17.93 10 19.5 8.43 19.5 6.5ZM19 11H2.5V13H19C19.83 13 20.5 13.67 20.5 14.5C20.5 15.33 19.83 16 19 16V18C20.93 18 22.5 16.43 22.5 14.5C22.5 12.57 20.93 11 19 11Z'
+                  fill='white'
+                ></path>
+              </svg>
+            </div>
+            <div class='weather__footer__element--value'>
+              <p id='wind-speed'>13</p>
+              <p id='wind-unit'>km/h</p>
+            </div>
+            <div class='weather__footer__element--desc'>
+              <p>Wind</p>
+            </div>
+          </div>
+          <!-- Humidity -->
+          <div class='weather__footer__element'>
+            <div class='weather__footer__element--svg'>
+              <svg
+                width='24'
+                height='24'
+                viewBox='0 0 24 24'
+                fill='none'
+                xmlns='http://www.w3.org/2000/svg'
+              >
+                <path
+                  fill-rule='evenodd'
+                  clip-rule='evenodd'
+                  d='M11 2.69L16.66 8.35C18.9491 10.6376 19.6345 14.0789 18.3965 17.069C17.1586 20.059 14.2412 22.0087 11.005 22.0087C7.76882 22.0087 4.8514 20.059 3.61346 17.069C2.37552 14.0789 3.06093 10.6376 5.35 8.35L11 2.69Z'
+                  stroke='white'
+                  stroke-width='2'
+                  stroke-linecap='round'
+                  stroke-linejoin='round'
+                ></path>
+              </svg>
+            </div>
+            <div class='weather__footer__element--value'>
+              <p id='humidity'>25</p>
+              <p>%</p>
+            </div>
+            <div class='weather__footer__element--desc'>
+              <p>humidity</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

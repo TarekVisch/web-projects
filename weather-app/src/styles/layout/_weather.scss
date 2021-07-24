@@ -1,0 +1,141 @@
+.weather {
+  background: linear-gradient(to bottom, $blue-light, $blue-dark);
+  border-radius: 20px;
+  border: 1px solid rgba(#fff, 0.25);
+  box-shadow: 0 0 10px $blue-light;
+  overflow: hidden;
+  padding: 20px;
+
+  @media (max-width: 425px) {
+    border-radius: 20px 20px 200px 200px;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__location {
+      display: flex;
+      align-items: center;
+
+      &--svg {
+        margin-right: 5px;
+      }
+
+      p {
+        font-weight: 600;
+        font-size: 24px;
+      }
+    }
+
+    // &__expand {
+    // }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /* Forecast image */
+    &__image {
+      margin-top: 10px;
+      width: 100%;
+      text-align: center;
+
+      img {
+        width: 300px;
+        height: auto;
+
+        @media (max-width: 375px) {
+          width: 250px;
+        }
+      }
+    }
+
+    /* Forecast temperature */
+    &__temp {
+      display: flex;
+      justify-content: center;
+
+      p {
+        text-shadow: 0 5px 5px rgba(0, 0, 0, 0.25);
+      }
+
+      p:first-child {
+        font-size: 100px;
+        font-weight: 500;
+        letter-spacing: 5px;
+      }
+      p:last-child {
+        font-weight: 600;
+        font-size: 17px;
+        padding-top: 21px;
+      }
+    }
+
+    /* Forecast description */
+    &__description {
+      margin-bottom: 5px;
+
+      p {
+        color: $grey-100;
+        font-size: 24px;
+        text-shadow: 0 5px 5px rgba(211, 116, 116, 0.25);
+      }
+    }
+
+    /* Forecast date */
+    &__date {
+      p {
+        font-size: 14px;
+        font-weight: 500;
+        color: $grey-300;
+      }
+    }
+  }
+
+  &__footer {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid $grey-300;
+    display: flex;
+    justify-content: center;
+
+    @media (max-width: 425px) {
+      padding: 20px;
+    }
+
+    &__element {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 15px;
+
+      // &--svg {
+      // }
+
+      &--value {
+        display: flex;
+        margin: 10px 0px;
+
+        p:first-child {
+          margin-right: 4px;
+        }
+
+        p:last-child {
+          font-size: 15px;
+        }
+      }
+
+      &--desc {
+        p {
+          color: $grey-400;
+          font-size: 11px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
